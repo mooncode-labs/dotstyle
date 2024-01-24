@@ -1,0 +1,40 @@
+---
+title: Tooltip
+name: tooltip
+seo:
+  title: Tooltip 
+  description: Tooltip components created with Tailwind CSS and React
+components:
+  1:
+    title: From Top
+  2:
+    title: From Bottom
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Tooltip Component
+The `Tooltip` component is a common UI element that provides additional information when a user hovers over or focuses on an element. It's particularly useful for enhancing user experience by providing context or explanations for interface elements without cluttering the UI.
+
+#### Usage and Accessibility
+- The component toggles the display of a tooltip based on user interactions like mouse hover and focus.
+- The `onMouseEnter` and `onMouseLeave` events control the visibility of the tooltip on hover, while `onFocus` and `onBlur` events manage its visibility during keyboard navigation.
+- The tooltip is positioned absolutely relative to its parent and can be customized for different placements by changing the `left` and `top` Tailwind classes. The large tooltip makes use of cardUtil and textLabel. If customising and wanting the 'popup' animation to exist, please ensure you add `transition` and `duration-` to the className, along with the `translate-x`/`translate-y`, `opacity` and `visible`/`invisible` values for the shown and hidden states. See the small tooltip for example.
+- The `aria-describedby` attribute on the button enhances accessibility by associating the tooltip content with the button for screen readers.
+
+#### Props
+- `children`: **ReactNode**
+  - The content (usually a button or icon) that triggers the tooltip.
+- `message`: **string**
+  - The text message displayed inside the tooltip.
+
+#### Example
+```jsx
+import Tooltip from './Tooltip';
+
+<Tooltip message="Tooltip message">
+  Hover over me
+</Tooltip>

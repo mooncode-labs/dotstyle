@@ -1,0 +1,37 @@
+---
+title: Table
+name: table
+seo:
+  title: Table 
+  description: Table components created with Tailwind CSS and React
+components:
+  1:
+    title: Pricing Table
+  2:
+    title: Invoice Table
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Table Component
+The `Table` component is a responsive and styled table layout suitable for displaying tabular data. This component is ideal for financial or personal data representation, offering a clear, concise view across different screen sizes.
+
+#### Usage and Accessibility
+- The component is structured to be responsive, adapting to various screen sizes with a particular focus on smaller screens.
+- Table headers (`<th>`) provide semantic meaning and improve accessibility, ensuring that screen readers can interpret the table correctly.
+- The use of classes like `hidden sm:block` allows for conditional rendering of table columns based on screen size, enhancing the mobile viewing experience.
+
+#### Structure
+- The table is wrapped in a div with a `flex` layout to ensure it adapts responsively to the container.
+- The `<thead>` section uses classes for styling, including text size and background color.
+- The `<tbody>` section contains individual rows (`<tr>`) for each data entry.
+- Each table cell (`<td>`) is styled consistently for readability.
+
+#### Example
+```jsx
+import Table from './Table';
+
+<Table />

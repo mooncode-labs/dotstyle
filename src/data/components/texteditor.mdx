@@ -1,0 +1,48 @@
+---
+title: Text Editor
+name: texteditor
+seo:
+  title: Text Editor Components
+  description: Text Editor components created with Tailwind CSS and React
+components:
+  1:
+    title: Default
+    description: Rich text editor using React Quill
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Rich Text Editor Component
+The `Editor` component is a responsive and styled text editor suitable for creating rich text. This is ideal in apps where you need to allow users to create customised and formattable text.
+
+### Usage
+  - This component is utilising react quill. You will need to install this dependency.
+
+  1. Please install react quill for this component to work.
+  `npm i react-quill`
+  2. You will notice the editor will have a slightly different styling. To make it look exactly like our style, please paste the following code into your css file.
+  ```css
+    .ql-toolbar{
+    border: 0 !important;
+    border-radius: 3px;
+    background: rgb(229, 229, 229);
+    }
+    .ql-container{
+      border: 0 !important;
+      color: black !important;
+    }
+  ```
+For further customisation, see react quill [docs](https://quilljs.com/docs/quickstart/)
+
+#### Structure
+- The editor header contains your editor tools to format text. The options can be edited by changing the `modules` object.
+- The editor is configured to accept images, links and video as well.
+
+#### Example
+```jsx
+import Editor from './Editor';
+
+<Editor />

@@ -1,0 +1,64 @@
+---
+title: Skeleton
+tag: New
+name: skeleton
+seo:
+  title: Skeleton 
+  description: Skeleton components created with Tailwind CSS and React
+components:
+  1:
+    title: Loading Card
+  2:
+    title: Loading Text
+  3:
+    title: Loading Image
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Skeleton Component
+The `Skeleton` component is a versatile placeholder used to enhance the user experience during data loading phases. It simulates the layout of the content that is loading, providing a smooth visual cue to indicate data fetching or processing.
+
+#### Usage
+- This component is ideal for displaying a placeholder while waiting for content to load, thereby improving the perceived performance of the application.
+- It's typically used in scenarios where data fetches might lead to a delay in rendering actual content, such as retrieving user information or loading a list of items.
+- The component includes animated elements that mimic the layout of a typical card, image or text.
+
+#### Structure
+- The entire card and its elements have a 'pulse' animation, which creates a visually appealing loading effect.
+
+#### Example
+```jsx
+import React, { useState, useEffect } from 'react';
+import SkeletonCard from './SkeletonCard';
+
+const ContentComponent = () => {
+  const [content, setContent] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simulating a data fetch
+  useEffect(() => {
+    setTimeout(() => {
+      setContent({ title: "Loaded Content", description: "This is the description of the loaded content." });
+      setIsLoading(false);
+    }, 3000); // 3 seconds delay
+  }, []);
+
+  return (
+    <div>
+      {isLoading ? (
+        <SkeletonCard />
+      ) : (
+        <div className="cardDefault">
+          <h2>{content.title}</h2>
+          <p>{content.description}</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ContentComponent;

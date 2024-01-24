@@ -1,0 +1,49 @@
+---
+title: Date Picker
+name: datepicker
+seo:
+  title: Date Picker
+  description: Date Picker component created with Tailwind CSS and React
+components:
+  1:
+    title: Default
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### DatePicker Component
+The `DatePicker` component is a simple yet effective tool for incorporating date selection functionality into your application. It provides a simple user interface for picking dates, ensuring a smooth and intuitive experience.
+
+#### Usage and Accessibility
+- Editing its appearance is as simple as changing the 'input' style from your dotstyle Tailwind CSS/JS classes and/or editing the jsx.
+- The `DatePicker` is primarily used for selecting a date within forms or filters in your application. Its minimalistic design integrates seamlessly with various UI designs.
+- This component is equipped with an interactive calendar interface, allowing users to easily select a date.
+
+#### Props
+- `selected` : **string**
+  - The currently selected date. Dates should be passed in the format 'YYYY-MM-DD'.
+- `onChange` : **function**
+  - Event handler for the date change. It's triggered when a user selects a date from the calendar interface.
+
+#### Example
+```jsx
+import React, { useState } from 'react';
+import DatePicker from './DatePicker';
+
+const handleToastData = (data) => {
+    console.log(data);
+}
+
+function ExampleComponent() {
+  const [date, setDate] = useState('');
+
+  return (
+    <DatePicker 
+      selected={date} //or selected="2024-01-31" for example
+      onChange={handleToastData}
+    />
+  );
+}

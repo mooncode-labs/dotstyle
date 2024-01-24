@@ -1,0 +1,62 @@
+---
+title: Loaders
+name: loaders
+seo:
+  title: Loader 
+  description: Loader components created with Tailwind CSS and React
+components:
+  1:
+    title: Simple
+  2:
+    title: Icon Only
+  3:
+    title: Text and Icon
+  4:
+    title: Circles
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Loader Component
+The `Loader` component is a visually appealing and accessible indicator for loading processes in React applications. It is particularly useful for providing feedback during data fetching or long-running tasks.
+
+#### Usage and Accessibility
+- The loader displays an animated SVG icon alongside descriptive text to indicate an ongoing loading process.
+- Accessibility features such as `aria-live="polite"` and `role="status"` ensure the component's changes are announced to screen readers appropriately.
+- The `aria-label` attribute provides a meaningful description for screen readers, combining the provided title with a loading message.
+- The component uses visually hidden text to enhance accessibility for screen reader users, without altering the visual UI.
+
+#### Props
+- `title`: **string** (for Loaders with Text)
+  - Descriptive text displayed next to the loading animation, typically indicating what is being loaded.
+
+#### Example
+```jsx
+import React, { useState, useEffect } from 'react';
+import Loader from './Loader';
+
+const MyComponent = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        // Simulate a loading process, e.g., data fetching
+        setTimeout(() => {
+            setIsLoaded(true);
+        }, 2000); // 2 seconds delay
+    }, []);
+
+    return (
+        <div>
+            {isLoaded ? (
+                <div>Content Loaded!</div>
+            ) : (
+                <Loader title="Loading Content" />
+            )}
+        </div>
+    );
+};
+
+export default MyComponent;

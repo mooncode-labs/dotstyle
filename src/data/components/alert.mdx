@@ -1,0 +1,45 @@
+---
+title: Alert
+name: alert
+seo:
+  title: Alert 
+  description: Alert components created with Tailwind CSS and React
+components:
+  1:
+    title: Popup
+  2:
+    title: Popup with Action
+  3:
+    title: Error
+  4:
+    title: Success
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Alert Component
+The `AlertComponent` is designed to display important messages to users in a concise and noticeable format. It's ideal for displaying success messages, warnings, or other crucial information.
+
+#### Usage and Accessibility
+- Editing its appearance is as simple as changing the 'cardDefault' style from your dotstyle Tailwind CSS/JS classes and/or editing the jsx. It also uses 'text5' and 'textBody'. The action button is 'btnPrimary'
+- The alert is visible by default. It can be dismissed by the user with the close button/icon/action button.
+- role="alert": Marks the element as an alert message, ensuring it is promptly announced by screen readers.
+- aria-live="assertive": Indicates that the alert should be announced urgently.
+
+#### Props
+- title : **string**
+  - A string representing the title of the alert. This is typically a short, bold statement.
+- message : **string**
+  - A string that provides additional details about the alert.
+
+#### Example
+```jsx
+import { useState } from 'react'
+
+<AlertComponent
+  title="Notification"
+  message="You have new updates available."
+/>

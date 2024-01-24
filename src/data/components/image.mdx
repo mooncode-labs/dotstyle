@@ -1,0 +1,53 @@
+---
+title: Image
+name: image
+seo:
+  title: Image 
+  description: Image components created with Tailwind CSS and React
+components:
+  1:
+    title: Image with Caption
+  2:
+    title: On Error
+    description: When an invalid image URL is provided
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### ImageComponent
+The `ImageComponent` is a flexible React component for displaying images with additional features such as lazy loading, error handling, and captions.
+
+#### Usage and Accessibility
+- This component is designed to display images with support for lazy loading and error handling.
+- The `role="img"` attribute on the main div provides semantic meaning to assistive technologies, identifying it as an image container.
+- The `aria-label` is used to provide a textual alternative for screen readers.
+- The `aria-busy` attribute indicates whether the image is currently being loaded.
+- The component gracefully handles image loading errors by displaying a placeholder and a message.
+
+#### Props
+- `src`: **string**
+  - The source URL of the image.
+- `alt`: **string**
+  - A text description of the image for accessibility purposes.
+- `aspectRatio`: **string**
+  - Optional. Used to specify the aspect ratio of the image container. Should be one of `aspect-auto`, `aspect-square` or `aspect-video`. Alternatively, you may use Tailwind's arbitrary values feature. Learn more [here](https://tailwindcss.com/docs/aspect-ratio).
+- `lazyLoad`: **boolean**
+  - Optional. If true, the image will load lazily.
+- `caption`: **string**
+  - Optional. A caption that is displayed below the image.
+
+#### Example
+```jsx
+import React, { useState } from 'react';
+import ImageComponent from './ImageComponent';
+
+<ImageComponent
+  src="image_url.jpg"
+  alt="Descriptive text"
+  aspectRatio="16:9"
+  lazyLoad={true}
+  caption="Image caption"
+/>

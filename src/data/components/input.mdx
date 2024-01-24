@@ -1,0 +1,57 @@
+---
+title: Input
+name: input
+seo:
+  title: Input 
+  description: Input components created with Tailwind CSS and React
+components:
+  1:
+    title: Default
+    dark: false
+  2:
+    title: Top Label
+    dark: false
+  3:
+    title: Bottom Label
+    dark: false
+  4:
+    title: File Selector
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Input Component
+The `Input` component is a customizable and reusable text input field, essential for forms and user data entry interfaces. It provides a clean and accessible way to gather input from users.
+
+#### Usage
+- This component is ideal for collecting textual data from users, such as names, emails, or any other information.
+- Styling can be done through the dotstyle input style. Our default already includes disabled and clear focus styles.
+- It supports basic functionalities like displaying a label, placeholder text, and handling user input.
+- The component also allows for being disabled, making it versatile for various interactive states in your application.
+
+#### Props
+- `label`: **string**
+  - The text label displayed above the input field.
+- `placeholder`: **string**
+  - Placeholder text shown inside the input field to guide users.
+- `disabled`: **boolean**
+  - If set to `true`, the input field will be non-interactive. Default is false.
+- `onChange`: **function**
+  - A callback function that is called when the input value changes.
+
+#### Example
+```jsx
+import React from 'react';
+import Input from './Input';
+
+<Input
+  label="Email Address"
+  placeholder="Enter your email"
+  disabled={false}
+  onChange={(value) => console.log('Input value:', value)}
+/>
+
+

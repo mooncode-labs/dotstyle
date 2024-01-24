@@ -1,0 +1,47 @@
+---
+title: Combobox
+tag: New
+name: combobox
+seo:
+  title: Combobox 
+  description: Combobox components created with Tailwind CSS and React
+components:
+  1:
+    title: Click to open
+  2:
+    title: Reveal on hover
+  3:
+    title: Combo Combo!
+    description: Uses Combobox1 and Combobox2
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Combobox Component
+The `Combobox` component is a customizable dropdown menu, ideal for scenarios where users need to click an button from a list. It features a sleek design and is easy to integrate into various parts of an application.
+
+#### Usage and Accessibility
+- This component combines a button and a dropdown list, or dropdown list reveal on hover for ease of use. You can mix and match these as shown in the third variant.
+- Accessibility features such as `role="combobox"`, `aria-controls`, `aria-expanded`, and `aria-haspopup` are implemented for better integration with screen readers and other assistive technologies.
+- Mouse and keyboard focus events control the visibility of the dropdown, enhancing user experience and accessibility.
+
+#### Props
+- `label`: **string**
+  - The text displayed on the button that triggers the dropdown.
+- `onOptionClick`: **function**
+  - A callback function that is called when an option in the dropdown is clicked.
+
+#### Example
+```jsx
+import React from 'react';
+import ComboboxDropdown from './ComboboxDropdown';
+
+const options = ['Option 1', 'Option 2', 'Option 3'];
+
+<Combobox1
+  label="Select an Option"
+  onOptionClick={(option) => console.log('Selected:', option)}
+/>

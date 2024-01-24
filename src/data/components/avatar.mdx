@@ -1,0 +1,46 @@
+---
+title: Avatar
+name: avatar
+seo:
+  title: Avatar 
+  description: Avatar components created with Tailwind CSS and React
+components:
+  1:
+    title: Picture Only
+  2:
+    title: Avatar with Name
+  3:
+    title: Avatar with Badge
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Avatar Component
+The `Avatar` component is a user interface element that combines an avatar image with a user's name and a clickable action. It's ideal for user profiles, comment sections, or any place where you need to display user information alongside an avatar.
+
+#### Usage
+- This component displays a user's avatar, with variant for their name or a status badge.
+- The avatar's size is customizable through the `height` prop.
+- An `onClick` event handler can be attached for additional interactivity, such as opening a user profile or triggering a modal.
+
+#### Props
+- `height`: **string**
+  - The height of the avatar image. If not provided, it defaults to "40px".
+- `name`: **string**
+  - The name of the user to be displayed next to the avatar.
+- `onClick`: **function**
+  - The function to execute when the avatar is clicked.
+
+#### Example
+```jsx
+import React from 'react';
+import AvatarNamed from './AvatarNamed';
+
+<AvatarNamed
+  height="50px"
+  name="John Doe"
+  onClick={() => console.log('Avatar Clicked')}
+/>

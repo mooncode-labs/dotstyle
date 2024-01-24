@@ -1,0 +1,46 @@
+---
+title: Card
+name: card
+seo:
+  title: Card 
+  description: Card components created with Tailwind CSS and React
+components:
+  1:
+    title: Simple Card
+  2:
+    title: Blog Card
+  3:
+    title: Card with Actions
+  4:
+    title: Block Style
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Card Component
+The `Card` component is a simple yet effective UI element for displaying content in a card layout. It's suitable for a wide range of applications, from displaying user profiles to product details.
+
+#### Usage
+- The component is designed to be versatile, allowing for any type of content to be passed as children.
+- It features a title section and a content section, with the latter being flexible to accommodate various types of content.
+- The styling includes a maximum width and responsive design, making it suitable for different screen sizes. Dotstyle classes used are usually cardDefault or cardUtil, or one your have made yourself in our style builder. All cards use text4 for heading and textBody or textMute for children text.
+- Dark mode compatibility is provided through class-based styling.
+
+#### Props (add more to fit the card you are creating)
+- `title`: **string**
+  - The title of the card, displayed prominently at the top.
+- `children`: **ReactNode**
+  - The content of the card, which can include text, images, or any other React elements.
+
+#### Example
+```jsx
+import React from 'react';
+import Card from './Card';
+
+<Card title="Card Title">
+    <p>This is some content inside the card.</p>
+    <p>More content can be added as needed.</p>
+</Card>

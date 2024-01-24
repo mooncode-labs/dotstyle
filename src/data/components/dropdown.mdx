@@ -1,0 +1,34 @@
+---
+title: Dropdown
+name: dropdown
+seo:
+  title: Dropdown 
+  description: Dropdown components created with Tailwind CSS and React
+components:
+  1:
+    title: Animated Dropdown
+  2:
+    title: Animated With Submit
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+#### Usage and Accessibility
+- Editing its appearance is as simple as changing the 'btnSecondary' style from your dotstyle Tailwind CSS classes and/or editing the jsx.
+- The aria-expanded attribute on the button indicates whether the accordion content is expanded or collapsed. The aria-disabled attribute indicates if the accordion is interactable. The content section is marked with role="region" to signify a perceivable section to assistive technologies.
+
+#### Props
+- options : **Array**
+  - An array of strings that represent the available options in the dropdown.
+- onChange : **function**
+  - A function that is called with the selected option when an option is chosen and the submit button is clicked.
+
+#### Example
+```jsx
+<Dropdown
+  options={['Option 1', 'Option 2', 'Option 3']}
+  onChange={(selectedOption) => console.log(selectedOption)}
+/>

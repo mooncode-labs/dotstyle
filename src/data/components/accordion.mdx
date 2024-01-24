@@ -1,0 +1,44 @@
+---
+title: Accordion
+name: accordion
+seo:
+  title: Accordion 
+  description: Accordion components created with Tailwind CSS and React
+components:
+  1:
+    title: Animated
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Accordion Component
+The `Accordion` component is a versatile UI element used to display collapsible content panels. It's useful for FAQs, content organization, and improving page navigation.
+
+#### Usage and Accessibility
+- The Accordion component is ideal for hiding data until clicked by the user.
+- The aria-expanded attribute on the button indicates whether the accordion content is expanded or collapsed. The aria-disabled attribute indicates if the accordion is interactable. The content section is marked with role="region" to signify a perceivable section to assistive technologies.
+
+#### Props
+- children : **React Component**
+  - The content that will be displayed when the accordion is expanded. This can be text, components, or any JSX elements.
+- title : **string**
+  - A string that represents the title of the accordion. This will always be visible and is used to toggle the accordion.
+- defaultActive : **boolean**
+  - A boolean that determines if the accordion should be open or closed by default. Defaults to false.
+- disabled : **boolean**
+  - A boolean that, when true, disables the ability to open or close the accordion. Defaults to false.
+
+#### Example
+```jsx
+import { useState } from 'react'
+
+<Accordion
+  title="Accordion Title"
+  defaultActive={false}
+  disabled={false}
+>
+  This is the content of the accordion.
+</Accordion>

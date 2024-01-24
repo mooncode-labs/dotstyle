@@ -1,0 +1,45 @@
+---
+title: Badge
+name: badge
+seo:
+  title: Badge 
+  description: Badge components created with Tailwind CSS and React
+components:
+  1:
+    title: Badge with Dot
+    dark: false
+  2:
+    title: Badge with Icon
+    dark: false
+  3:
+    title: Simple Badge with Text
+    dark: false
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Badge Component
+The `Badge` component is a small but impactful UI element used to display status or highlight key information. It's particularly effective in dashboards, lists, or anywhere you need to draw attention to certain aspects like statuses or categories.
+
+#### Usage
+- The `Badge` component is designed to display different statuses with associated colors, making it highly versatile for various UI contexts.
+- It supports a range of statuses like 'success', 'warning', 'error', 'info', and a default state, each with a distinct color.
+- The component uses accessible practices, including a visually hidden label for screen readers, ensuring that the badge's purpose is clear in all contexts.
+
+#### Props
+- `title`: **string**
+  - The text to be displayed within the badge.
+- `status`: **string**
+  - The status type of the badge which determines its color. Accepted values are 'success', 'warning', 'error', 'info', or the default is gray.
+
+#### Example
+```jsx
+import React from 'react';
+import Badge from './Badge';
+
+<Badge title="New" status="success" />
+<Badge title="Alert" status="warning" />
+<Badge title="Error" status="error" />

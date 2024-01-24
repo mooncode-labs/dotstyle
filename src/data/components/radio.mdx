@@ -1,0 +1,54 @@
+---
+title: Radio
+name: radio
+seo:
+  title: Radio
+  description: Radio components created with Tailwind CSS and React
+components:
+  1:
+    title: Circle
+  2:
+    title: Check with Submit
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### RadioCheck Component
+The `RadioCheck` component provides a group of radio buttons for selecting options. It's ideal for forms where a user needs to choose one option from a set.
+
+#### Usage and Accessibility
+- The component dynamically generates radio buttons based on the provided `options` array.
+- Accessibility is enhanced with labels and appropriate ARIA attributes.
+- The radio buttons are styled for a modern look and feel, with custom SVG checkmarks.
+- The component handles scenarios where no options are provided by displaying default options and disabling the input.
+
+#### Props
+- `label`: **string**
+  - The label for the radio button group.
+- `options`: **String Array**
+  - An array of options for the radio buttons. If no options are provided, the radio buttons are disabled by default.
+- `disabled`: **boolean**
+  - A boolean to enable or disable the radio buttons.
+- `onSubmit`: **function**
+  - A callback function that is called when the submit button is clicked.
+
+#### Example
+```jsx
+import React from 'react';
+import RadioCheck from './RadioCheck';
+
+const options = ["Option 1", "Option 2", "Option 3"];
+
+const handleSubmit = (selected) => {
+    console.log("Selected option:", selected);
+};
+
+<Radio
+    label="Choose an option"
+    options={options}
+    onSubmit={handleSubmit}
+/>
+```

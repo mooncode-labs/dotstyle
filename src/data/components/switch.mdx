@@ -1,0 +1,49 @@
+---
+title: Switch
+name: switch
+seo:
+  title: Switch 
+  description: Switch components created with Tailwind CSS and React
+components:
+  1:
+    title: Default Switch
+  2:
+    title: Switch with Submit
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Switch Component
+The `Switch` component is a toggleable interface element, commonly used as an alternative to a checkbox. It's ideal for scenarios where a user needs to choose between two mutually exclusive options, like enabling/disabling a setting.
+
+#### Usage and Accessibility
+- The component mimics a switch control, allowing users to toggle between an on/off state.
+- It maintains an internal state to track whether it's checked or not, and this state can be manipulated through user interaction.
+- Accessibility is considered with appropriate roles and ARIA attributes. The `role="switch"` and `aria-checked` attributes make it clear to screen reader users that it's a switch control with a toggleable state.
+- The `Switch` component also supports being disabled, preventing user interaction in certain conditions.
+
+#### Props
+- `label`: **string**
+  - The label associated with the switch, describing its purpose.
+- `disabled`: **boolean**
+  - Determines if the switch is interactable. When `true`, the switch is disabled. Default is false.
+- `checked`: **boolean**
+  - The initial state of the switch, either checked `true` or unchecked `false`.
+- `onChange`: **function**
+  - A callback function that is called with the new state when the switch is toggled.
+
+#### Example
+```jsx
+import React from 'react';
+import Switch from './Switch';
+
+<Switch
+  label="Enable Dark Mode"
+  disabled={false}
+  checked={true}
+  onChange={(value) => console.log('Switch is now:', value)}
+/>
+

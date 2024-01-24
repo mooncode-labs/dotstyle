@@ -1,0 +1,58 @@
+---
+title: Modal
+name: modal
+seo:
+  title: Modal 
+  description: Modal components created with Tailwind CSS and React
+components:
+  1:
+    title: Share Modal
+  2:
+    title: Message Modal
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Modal Component
+The `Modal` component is a versatile dialog box useful for displaying information, confirming actions, or gathering input from the user. It offers a range of interactive features including closing on outside click or `Escape` key press.
+
+#### Usage and Accessibility
+- Accessibility features include `role="dialog"` and `aria-labelledby` for improved screen reader support.
+- Event listeners for the `Escape` key and outside clicks enhance user experience and accessibility.
+- The modal supports custom content through the `children` prop and can execute an action with the `onAction` callback.
+
+#### Props
+- `title`: **string**
+  - The title displayed at the top of the modal.
+- `message`: **string**
+  - A message or description displayed within the modal.
+- `children`: **ReactNode**
+  - Custom content to be rendered within the modal.
+- `onAction`: **function** (if action button is present)
+  - A callback function triggered when the action button is clicked.
+
+#### Example
+```jsx
+import React from 'react';
+import Modal from './Modal';
+
+const MyComponent = () => {
+    const handleAction = (value) => {
+        console.log('Action with:', value);
+    };
+
+    return (
+        <Modal 
+            title="Modal Title"
+            message="This is the modal message."
+            onAction={handleAction}
+        >
+            <p>Additional content can go here.</p>
+        </Modal>
+    );
+};
+
+export default MyComponent;

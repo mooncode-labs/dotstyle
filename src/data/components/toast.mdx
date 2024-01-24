@@ -1,0 +1,58 @@
+---
+title: Toast
+name: toast
+seo:
+  title: Toast 
+  description: Toast components created with Tailwind CSS and React
+components:
+  1:
+    title: Toast with Action
+    dark: false
+  
+---
+
+<CollectionList
+  componentsData={componentsData}
+/>
+<PreviewNotes/>
+
+### Toast Component
+The `Toast` component is a notification pop-up used to provide feedback to users in response to their actions. It supports various configurations, including position, duration, and type of toast.
+
+#### Usage and Accessibility
+- This component displays a toast notification, which can be automatically triggered or toggled via a button.
+- It allows custom content through the `children` prop and supports different types like success or error.
+- The position of the toast (left, right, or center) can be specified, and it's animated based on this position.
+- The toast disappears automatically after a specified duration, with the default being 3000 milliseconds.
+- Accessibility features include `aria-live` and `role` attributes to ensure the toast notifications are accessible to screen readers.
+
+#### Props
+- `title`: **string**
+  - The title displayed on the toast.
+- `message`: **string**
+  - A descriptive message shown on the toast.
+- `children`: **ReactNode**
+  - Custom content to be displayed below the message.
+- `type`: **string**
+  - The type of toast ('success', 'error' or default type), which affects its styling.
+- `duration`: **number**
+  - Duration in milliseconds for which the toast is visible.
+- `position`: **string**
+  - The position of the toast on the screen ('left', 'right', or default centered).
+
+#### Example
+```jsx
+import React from 'react';
+import Toast from './Toast';
+
+<Toast
+    title="Success!"
+    message="This is a success message."
+    type="success"
+    duration={5000}
+    position="right"
+>
+    <p>Additional content can go here.</p>
+</Toast>
+
+
