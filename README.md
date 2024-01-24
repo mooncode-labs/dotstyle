@@ -16,7 +16,7 @@ We welcome contributions to DotStyle. If you're interested in helping, here's ho
 1. **Submit an Issue**: Use the [Issues tab](https://github.com/mooncode-labs/dotstyle/issues) to submit a new suggestion.
 2. **Detail Your Suggestion**: Clearly describe your suggestion, including any steps to implement it if you have a specific idea in mind.
 
-### Making Edits to our components
+### Adding New / Making Edits to our components
 1. **Make Your Changes**: Work on the feature or fix.
 2. **Test Your Changes**: Ensure that your changes don't break any existing functionality.
 3. **Submit a Pull Request or Issue**: Open a new pull request or submit an issue with your code, and we will review and update if it passes our requirements.
