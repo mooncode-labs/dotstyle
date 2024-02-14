@@ -2,7 +2,7 @@
 
 ## Description
 Sleek, modern and easy to use components made with React and Tailwind CSS - Open Source and Free!
-![DotStyle Cover](https://github.com/mooncode-labs/dotstyle/blob/main/public/opengraph-image.png)
+![DotStyle Cover](https://github.com/mooncode-labs/dotstyle/blob/main/src/app/opengraph-image.png)
 
 ## Contributing
 We welcome contributions to DotStyle. If you're interested in helping, here's how you can contribute:
