@@ -27,12 +27,12 @@ export default function Switch({ label, disabled, checked, onChange }) {
           role="switch"
         />
         <span
-          className={`mr-3 flex h-[21px] w-[45px] items-center rounded-full p-1 duration-200 ${disabled ? 'pacity-50 cursor-not-allowed' : ''} ${isChecked ? 'bg-black dark:bg-white' : 'bg-gray-200 dark:bg-neutral-700'
+          className={`mr-3 flex h-[21px] w-[38px] items-center rounded-full p-1 duration-200 ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${isChecked ? 'bg-black dark:bg-white' : 'bg-gray-200 dark:bg-neutral-700'
             }`}
           aria-hidden="true"
         >
           <span
-            className={`h-[14px] w-[14px] rounded-full bg-white dark:bg-neutral-800 duration-200 ${isChecked ? 'translate-x-6' : ''
+            className={`h-[14px] w-[14px] rounded-full bg-white dark:bg-neutral-800 duration-200 ${isChecked ? 'translate-x-4' : ''
               } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
             aria-hidden="true"
           ></span>

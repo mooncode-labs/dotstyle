@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 
-export default function Input({ placeholder, onChange, disabled, error }) {
+export default function Input({ placeholder, onChange, disabled }) {
   const [value, setValue] = useState('');
 
   const handleChange = (event) => {
@@ -25,7 +25,7 @@ export default function Input({ placeholder, onChange, disabled, error }) {
         value={value}
         placeholder={placeholder}
         onChange={handleChange}
-        className={`input ${error ? 'error' : ''}`}
+        className="inputMain"
         disabled={disabled}
       />
     </div>

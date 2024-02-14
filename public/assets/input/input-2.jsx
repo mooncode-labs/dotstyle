@@ -17,7 +17,7 @@ export default function Input({ label, placeholder, disabled, onChange }) {
                 <label htmlFor="email" className="sr-only">{label}</label>
                 <label className="textLabel mb-1">{label}</label>
                 <input
-                    className={`input`}
+                    className="inputMain"
                     type="text"
                     id="email"
                     name="email"

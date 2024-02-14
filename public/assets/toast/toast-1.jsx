@@ -66,7 +66,7 @@ export default function Toast({ title, message, children, type, duration, positi
 
             {/* Toast, change bottom-0 to top-0 to show toasts at top */}
             <div
-                className={`fixed bottom-0 w-full min-h-[4rem] sm:max-w-sm cardDefault ${getPositionClass()} ${getToastTypeClass()} sm:ml-4 sm:mr-4 mb-4 z-50 transform ${showToast ? 'opacity-100 scale-95 sm:scale-100' : `${getAnimClass()} opacity-0 scale-90`}`}
+                className={`fixed bottom-0 w-full min-h-[4rem] sm:max-w-sm cardDefault ${getPositionClass()} ${getToastTypeClass()} sm:ml-4 sm:mr-4 mb-4 z-50 transform ${showToast ? 'opacity-100 scale-95 sm:scale-100 visible' : `${getAnimClass()} opacity-0 scale-90 invisible`}`}
                 aria-live="assertive" // 'polite' for less important messages
                 aria-atomic="true"
                 role="alert"

@@ -14,18 +14,47 @@ components:
 />
 <PreviewNotes/>
 
-### Usage
-  - Ideal for displaying messages in your application, or small functionality like a share popup. Features subtle and smooth animations, and background blur for easier visibility of modal content.
+### Tabs Component
+The `Tabs` component is a versatile UI element used for organizing content into different sections, typically displayed as a set of clickable tabs. Users can switch between tabs to view different sets of content without navigating away from the page.
 
-### Props
+#### Usage and Accessibility
+- The component utilizes checkboxes to toggle between different tabs, providing both mouse and keyboard accessibility.
+- Each tab is associated with a specific content section, which is displayed when the tab is active.
+- Users can interact with tabs by clicking on them or navigating using the keyboard (e.g., using the Tab key to move focus and the Enter key to select a tab).
+- The active tab is visually distinguished from inactive tabs, usually by changing its appearance, such as background color or font weight.
 
-- `label`
+#### Props
+- `tabs`: **Array** of **Objects**
+  - An array of objects representing individual tabs. Each object should have the following properties:
+    - `label`: **string** - The text displayed on the tab button.
+    - `value`: **string** - Unique identifier for the tab.
+    - `content`: **string** - The text content displayed when the tab is active.
 
-  **Type**: string
+#### Example
+```jsx
+import Tab from './Tab';
 
-  **Description**: The label inside the checkbox.
+const tabs = [
+  {
+    label: 'Sun',
+    value: 'sun',
+    content:
+      'The sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as light and infrared radiation.'
+  },
+  {
+    label: 'Moon',
+    value: 'moon',
+    content:
+      'The Moon is an astronomical body orbiting Earth as its only natural satellite. It is the fifth-largest satellite in the Solar System, and by far the largest among planetary satellites relative to the size of the planet that it orbits.'
+  },
+  {
+    label: 'Earth',
+    value: 'earth',
+    content:
+      'Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 29% of Earth\'s surface is land, consisting of continents and islands.'
+  }
+];
+
+<Tab tabs={tabs} />;
 
 
-### Accessibility Notes
-
-- Utilizes ARIA attributes for screen reader accessibility.

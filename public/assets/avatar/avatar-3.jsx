@@ -7,8 +7,8 @@ export default function AvatarBadge({ height, onClick }) {
     <button className="relative inline-flex items-center justify-center rounded gap-2"
       onClick={onClick}>
       <img
-        src="/breezeAvatar.png"
-        alt="user avatar"
+        src="/DS_Avatar.png"
+        alt="DS"
         title="user avatar"
         width={height}
         height={height}

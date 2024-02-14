@@ -6,14 +6,20 @@ seo:
   description: Button components created with Tailwind CSS and React
 components:
   1:
-    title: Default Buttons
+    title: Primary
   2:
-    title: Links
+    title: Secondary
   3:
-    title: With Icons
+    title: Outline
   4:
+    title: Danger
+  5:
+    title: Links
+  6:
+    title: With Icons
+  7:
     title: Utility
-    description: A button component which accepts svg, title and indicator/note
+    description: A button component which also accepts svg and indicator/note
 ---
 
 <CollectionList
@@ -43,6 +49,11 @@ The `Button` component combines the functionality of a button with the appearanc
 import React from 'react';
 import {Button, LinkButton, ActionButton, UtilityBtn } from './path';
 
+// Using just the styles
+<button className="btnPrimary" onClick={yourOnClickFunction}>Button</button>
+<button className="btnDanger" onClick={yourOnClickFunction}>Cancel</button>
+
+// Using as a component
 <Button
   label={"dotstyle"}
   onClick={() => console.log('Button clicked')}

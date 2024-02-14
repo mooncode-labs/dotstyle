@@ -16,7 +16,7 @@ export default function Input({ label, placeholder, disabled, onChange }) {
             <div className="relative">
                 <label htmlFor="email" className="sr-only">Email</label>
                 <input
-                    className="input"
+                    className="inputMain"
                     type="text"
                     id="email"
                     name="email"
@@ -25,7 +25,7 @@ export default function Input({ label, placeholder, disabled, onChange }) {
                     placeholder={placeholder}
                     onChange={handleChange}
                 />
-                <div className={`textMuted ml-1`}>{label}</div>
+                <div className="textMuted ml-1">{label}</div>
             </div>
         </div>
     )

@@ -14,10 +14,10 @@ export default function Accordion({
   }
 
   return (
-    <div className="p-2 mx-4 bg-white dark:bg-black max-w-lg">
+    <div className="p-2 bg-white dark:bg-black w-full max-w-lg">
       <h4>
         <button
-          className="flex items-center justify-between w-full text-left font-medium py-1 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center justify-between w-full text-left text-sm font-medium py-1 text-black dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
           onClick={handleAccordionOpen}
           aria-expanded={accordionOpen}
           disabled={disabled}
@@ -34,10 +34,10 @@ export default function Accordion({
       </h4>
       <div
         role="region"
-        className={`grid text-sm text-gray-600 dark:text-gray-400 overflow-hidden transition-all duration-300 ease-in-out ${accordionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+        className={`grid text-sm text-gray-600 dark:text-gray-400 overflow-hidden transition-all duration-300 ease-in-out ${accordionOpen ? 'grid-rows-[1fr] mt-2 opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
       >
         <div className="overflow-hidden">
-          <p className="">
+          <p>
             {children}
           </p>
         </div>

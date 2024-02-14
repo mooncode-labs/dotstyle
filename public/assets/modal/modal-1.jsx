@@ -53,13 +53,13 @@ export default function Modal({title, message, children, onAction}) {
 
     return (
         <div>
-            <button className={`btnPrimary`} onClick={openModal}>Open Modal</button>
+            <button className="btnPrimary" onClick={openModal}>Open Modal</button>
 
             <div className={`modal-overlay fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white dark:bg-black/40 bg-opacity-50 z-50 transition-all duration-200 ease-in-out transform ${isOpen ? ' backdrop-blur-sm opacity-100 visible' : 'backdrop-blur-none opacity-0 invisible'}`}
                 role="dialog"
                 tabIndex={-1}
                 aria-labelledby="modalTitle">
-                <div className={`cardDefault max-w-40 sm:max-w-md w-max transform ${isOpen ? 'translate-y-0 opacity-100 scale-100' : '-translate-y-2 opacity-0 scale-90'}`}>
+                <div className={`cardDefault sm:max-w-sm w-full max-w-xs transform ${isOpen ? 'translate-y-0 opacity-100 scale-100' : '-translate-y-2 opacity-0 scale-90'}`}>
                     <span className="text4" id="modalTitle">{title}</span>
                     <p className="textMuted my-2">{message}</p>
                     <div className="relative flex items-center gap-2 my-2">
@@ -71,10 +71,10 @@ export default function Modal({title, message, children, onAction}) {
                             value={value}
                             onChange={handleChange}
                             aria-label="Message input"
-                            className={`input sm:w-80 `}
+                            className="inputMain w-full"
                         />
                         <button
-                            className={`btnPrimary w-9 px-0`}
+                            className="btnPrimary w-9 !h-9 px-0"
                             aria-label="Send"
                             onClick={handleSend}
                         >
@@ -83,7 +83,7 @@ export default function Modal({title, message, children, onAction}) {
                         </button>
                     </div>
                     {children}
-                    <button className={`btnPrimary`} onClick={closeModal}>Close</button>
+                    <button className="btnPrimary" onClick={closeModal}>Close</button>
                 </div>
             </div>
         </div>

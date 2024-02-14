@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react';
 
 export default function Dropdown({ options, onChange }) {
@@ -17,8 +18,7 @@ export default function Dropdown({ options, onChange }) {
     return (
         <div className="relative text-left">
                 <button
-                    type="button"
-                    className="btnSecondary w-40"
+                    className="btnPrimary w-40"
                     aria-haspopup="true"
                     aria-expanded={isOpen}  // Reflect open state
                     id="dropdown-toggle-button"
@@ -34,14 +34,14 @@ export default function Dropdown({ options, onChange }) {
 
 
             <div
-                className={`origin-top-right absolute left-0 mt-1 w-40 cardUtil
+                className={`origin-top-right absolute left-0 mt-1 w-40 cardUtil z-40
      ${isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-2 opacity-0 invisible'}`}
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="dropdown-toggle-button"
             >
                 {options.map((option, index) => (
-                    <button key={index} className={'text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center justify-between gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent'}
+                    <button key={index} className={'text-sm hover:bg-zinc-200 dark:hover:bg-zinc-800 p-[6px] rounded flex items-center justify-between gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent'}
                         onClick={() => handleOptionClick(option)}
                     >
                         {option}

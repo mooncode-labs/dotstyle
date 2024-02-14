@@ -12,7 +12,7 @@ export default function ComponentsLayout({
                 <div className='relative w-full flex min-h-screen flex-col max-w-screen-2xl justify-center'>
                     <div className='flex h-full'>
                         <LeftNav />
-                        <main className='relative flex justify-between w-full xxl:mx-10'>
+                        <main className='relative flex justify-between w-full xxl:mx-10 py-2    '>
                             {children}
                         </main>
                     </div>

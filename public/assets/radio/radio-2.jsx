@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react"
 
 export default function RadioCheck({ label, options, disabled, onSubmit }) {

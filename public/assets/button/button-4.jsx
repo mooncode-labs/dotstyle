@@ -1,29 +1,12 @@
-export default function BtnUtility({ label, svg, note, onClick, disabled }) {
+export default function Button({label, onClick, disabled}) {
     return (
         <button
-            className="text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center justify-between gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent"
-            onClick={onClick} //Adjust to your needs
+            className="btnDanger"
+            aria-label="Click to perform an action"
+            onClick={onClick}
             disabled={disabled}
-            aria-label={label}
-            aria-disabled={disabled}
         >
-            <div className='flex items-center w-full'>
-                {svg &&
-                    <div aria-hidden="true">
-                        {svg}
-                    </div>}
-                <div className="flex justify-between w-full">
-                    {label &&
-                        <div className={`text-left ${svg ? 'ml-2' : ''}`}>
-                            {label}
-                        </div>}
-                    {note &&
-                        <div className='ml-auto text-xs items-center flex text-gray-500'>
-                            {note}
-                        </div>
-                    }
-                </div>
-            </div>
+            <span>{label}</span>
         </button>
     );
 }

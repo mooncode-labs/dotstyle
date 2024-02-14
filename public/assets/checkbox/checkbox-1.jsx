@@ -1,10 +1,12 @@
+'use client'
 import React, { useState } from "react"
 
-export default function Checkbox({label, checked, disabled}) {
+export default function Checkbox({label, checked, disabled, onChange}) {
     const [isChecked, setIsChecked] = useState(checked ? checked : false)
 
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked)
+        onChange(!isChecked)
       }
     return (
         <div className="relative flex flex-wrap items-center gap-2">

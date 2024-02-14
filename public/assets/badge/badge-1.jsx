@@ -1,5 +1,5 @@
 export default function Badge({ title, status }) {
-    let color = 'bg-emerald-500'
+    let color;
 
     if (status === 'success') {
         color = 'bg-emerald-500'
@@ -14,7 +14,7 @@ export default function Badge({ title, status }) {
     }
 
     return (
-        <div role="badge" className={`badge w-fit`}>
+        <div role="badge" className="badgeRounded w-fit">
             <div className="flex flow-row">
                 <div className='flex justify-center items-center'>
                     <span className={`p-1 rounded-full ${color}`}>

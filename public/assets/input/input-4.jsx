@@ -10,7 +10,7 @@ const FileSelectComponent = ({disabled}) => {
   };
 
   return (
-    <div className={`input !w-60`} >
+    <div className="inputMain !w-60">
       <div className='flex justify-between w-full' id="selectedFileName">{selectedFileName}
       <button
         role="button"

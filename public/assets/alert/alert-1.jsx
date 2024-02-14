@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 
 export default function AlertComponent({ title, message }) {
@@ -10,7 +11,7 @@ export default function AlertComponent({ title, message }) {
     return (
         <div
             role="alert"
-            className={`cardDefault h-fit w-fit max-w-md relative ${isVisible ? 'translate-y-0 opacity-100 visible' : '-translate-y-2 opacity-0 invisible'}`}
+            className={`cardDefault h-fit w-full max-w-sm relative ${isVisible ? 'translate-y-0 opacity-100 visible' : '-translate-y-2 opacity-0 invisible'}`}
             aria-live="assertive"
         >
             <div className="flex gap-2 items-start">

@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 
 export default function DatePicker({ selected, onChange }) {
@@ -11,9 +12,9 @@ export default function DatePicker({ selected, onChange }) {
     };
 
     return (
-        <div className='w-60'>
+        <div className=''>
             <input
-                className="input"
+                className="inputMain w-60"
                 type="date"
                 value={date}
                 onChange={handleDateChange}
