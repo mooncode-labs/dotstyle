@@ -31,7 +31,7 @@ export default async function Page() {
                         <p>You have your component classnames on the left.</p>
                         <p>The fist entry is the base class, this is where you include styles you want all the
                             variants to inherit.</p>
-                        <p>For example, any styles placed in btn will be added to btnPrimary, btnOutline and btnSeconary.
+                        <p>For example, any styles placed in btn will be added to btnPrimary, btnOutline and btnSecondary.
                             This is great place to put constant styles, such as your focus, disabled, and container styles.</p>
                     </div>
 
@@ -46,16 +46,16 @@ export default async function Page() {
                         to type in classes or use the selectors. Selectors are a great if you do not know the syntax of
                         Tailwind too well. However, they do not provide every Tailwind class, nor allow arbitrary classes.
                     </p>
-                    <p>It should be noted, a text box categrory name is completely irrelevant, since all text boxes are merged during
+                    <p>It should be noted, a text box category name is completely irrelevant, since all text boxes are merged during
                         creation of the final copyable CSS. So it does not matter for example if you place a border class inside a text box
-                        labelled color! You can put everthing in a single text box if you really want!</p>
+                        labelled color! You can put everything in a single text box if you really want!</p>
                     <p className='font-mono'>3. Adding and Removing</p>
                     <p>You can add or remove variants with the + and - icons. You must have at minimum 1 variant with the base (you can just delete it after copying if you are not using it).</p>
                     <p className='font-mono'>4. Prefixing</p>
                     <p>The top navbar has a toggle to turn off prefixing. This removes all prefixes from the final CSS.
                         Be careful as classnames can get confusing if you have not named them well!
                     </p>
-                    <p>We recongize that you may have a classname notation you are already following, therefore we provide this option to allow naming of classes to your rules.
+                    <p>We recognize that you may have a classname notation you are already following, therefore we provide this option to allow naming of classes to your rules.
                         Hyphens and underscores are allowed. Numbers are too, if you place one at the start however it will be prefixed with an 'n' since CSS rules do not permit classes to begin with a number.</p>
 
                 </div>
@@ -64,8 +64,8 @@ export default async function Page() {
             <DocsSection title={'Global Styles'}>
                 <p>Expanding the right pane displays the global styles. Here you can choose to set any styles you may want to reuse.
                     For example, a background color or a certain border radius.
-                    Similair to the left pane, you can type these global styles.
-                    To apply them, use the globe icon dropowns under each of the categories in the left pane to apply that global style.</p>
+                    Similar to the left pane, you can type these global styles.
+                    To apply them, use the globe icon dropdowns under each of the categories in the left pane to apply that global style.</p>
                 <p> Global styles are a great way to ensure consistency when making your design system. You global styles will be saved with that particular design system only.</p>
             </DocsSection>
 
@@ -87,7 +87,7 @@ export default async function Page() {
 
             <DocsSection title={'Helpful Features'}>
                 <p className='font-mono'>1. Hover over a component to view how you would write it out in JSX.</p>
-                <p className='font-mono'>2. Designs are autosaved every 30 seconds.</p>
+                <p className='font-mono'>2. Designs are auto saved every 2 minutes.</p>
                 <p className='font-mono'>3. View all your designs by clicking My Designs on the left of the top navbar.</p>
             </DocsSection>
         </MainWithNav>

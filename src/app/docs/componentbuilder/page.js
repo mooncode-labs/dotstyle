@@ -1,15 +1,13 @@
 import MainWithNav from '@/components/structure/MainWithNav';
 import DocsSection from '@/components/structure/DocsSection';
-import ImageWrapper from "@/components/utilities/ImageWrapper";
-import Image from "next/image";
-import DotSnippet from "@/components/utilities/DotSnippet";
 import Link from "next/link";
 import React from "react";
 
 const links = [
     { href: '#how-does-it-work', title: 'How does it work?' },
-    { href: '#setup', title: 'Setup' },
-    { href: '#why-tailwind?', title: 'Why Tailwind?' },
+    { href: '#how-to-best-use-chat', title: 'How to best use chat' },
+    { href: '#dotstyle-blocks', title: 'DotStyle Blocks' },
+    { href: '#helpful-features', title: 'Helpful Features' },
 ];
 
 export const metadata  = {
@@ -68,7 +66,7 @@ export default async function Page() {
                     </p>
                     <p className='font-mono'>3. Dark mode and responsive design</p>
                     <p>Switch between dark and light mode with the button in our header.</p>
-                    <p>To activate mobile and full screen views, press the icons in the buttom right corner of the component preview. You can create responsive designs with Tailwind's
+                    <p>To activate mobile and full screen views, press the icons in the button right corner of the component preview. You can create responsive designs with Tailwind's
                         breakpoint prefixes. <Link className='text-accent1' href={'https://tailwindcss.com/docs/responsive-design'}>Learn More</Link>.</p>
                 </div>
             </DocsSection>
@@ -77,7 +75,7 @@ export default async function Page() {
                 <p>Chat works well when you iterate small and concisely. You can ask it to edit anything, but being clear will give you better results.</p>
                 <p>Your questions could be like this:</p>
                 <ul className='pl-4 list-disc'>
-                    <li>"Create a subcsription modal".</li>
+                    <li>"Create a subscription modal".</li>
                     <li>"Add dark mode colors to this component"</li>
                     <li>"Make this component responsive"</li>
                     <li>"Change the color of the send button"</li>
@@ -94,12 +92,12 @@ export default async function Page() {
             <DocsSection title={'DotStyle Blocks'}>
                 <p>Blocks can be accessed by clicking Blocks in the top right of the navbar.</p>
                 <p>This is a premium feature. It contains many prebuilt UI blocks, complete with responsive design and dark mode colors. They are great for you to get a headstart in your designs.</p>
-                <p>Blocks can be edited with code or AI to suit your style. They do not use our CSS class names and are pure Tailwind, providing absolute control over the stylings.</p>
+                <p>Blocks can be edited with code or AI to suit your style. They do not use our CSS class names and are pure Tailwind, providing absolute control over the styling.</p>
             </DocsSection>
 
             <DocsSection title={'Helpful Features'}>
-                <p className='font-mono'>1. ctrl+z to undo and crtl+y to redo code edits.</p>
-                <p className='font-mono'>2. The editor (monaco editor) is very similair to VS code, infact it is what VS code is built upon.
+                <p className='font-mono'>1. ctrl+z to undo and ctrl+y to redo code edits.</p>
+                <p className='font-mono'>2. The editor (monaco editor) is very similar to VS code, in fact it is what VS code is built upon.
                     You have a lot of the familiar actions like formatting code, refactoring multiple lines, autocomplete etc...</p>
                 <p className='font-mono'>3. View all your components by clicking My Components on the left of the top navbar.</p>
                 <p className='font-mono'>4. Change font size with the S and L buttons on the top navbar.</p>

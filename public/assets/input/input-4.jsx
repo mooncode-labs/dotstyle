@@ -42,8 +42,6 @@ const FileSelectComponent = ({disabled}) => {
         disabled={disabled}
         onChange={updateSelectedFileName}
       />
-
-      
     </div>
   );
 };

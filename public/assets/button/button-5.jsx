@@ -11,15 +11,7 @@ export default function LinkButton ({ label, url, disabled }) {
     return (
         <div className="flex flex-col gap-2">
             <button
-                className="text5 disabled:opacity-50 disabled:cursor-not-allowed"
-                aria-label="Click to access link"
-                onClick={handleClick}
-                disabled={disabled}>
-                <span className="hover:underline">{label}</span>
-            </button>
-
-            <button
-                className="btnSecondary"
+                className="text5 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 transition-transform duration-75"
                 aria-label="Click to access link"
                 onClick={handleClick}
                 disabled={disabled}>

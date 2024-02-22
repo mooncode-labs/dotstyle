@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react"
+import React, {useState} from "react"
 
 export default function Checkbox({label, checked, disabled, onChange}) {
     const [isChecked, setIsChecked] = useState(checked ? checked : false)
@@ -7,11 +7,11 @@ export default function Checkbox({label, checked, disabled, onChange}) {
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked)
         onChange(!isChecked)
-      }
+    }
     return (
-        <div className="relative flex flex-wrap items-center gap-2">
+        <div className="relative flex gap-2 items-center">
             <input
-                className="peer h-4 w-4 cursor-pointer appearance-none rounded border-2 border-slate-800 bg-white dark:bg-gray-700 transition-colors checked:bg-gray-800 dark:checked:bg-gray-100 checked:focus:border-blue-500 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="peer h-4 w-4 cursor-pointer appearance-none rounded border-2 border-zinc-800 bg-white dark:bg-zinc-700 transition-colors checked:bg-zinc-800 dark:checked:bg-zinc-100 checked:focus:border-blue-500 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                 type="checkbox"
                 role="checkbox"
                 checked={isChecked}
@@ -20,19 +20,24 @@ export default function Checkbox({label, checked, disabled, onChange}) {
                 aria-disabled={disabled}
                 onChange={handleCheckboxChange}
             />
-            <button
-                className={`textMuted cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50`}
-                disabled={disabled}
-                onClick={handleCheckboxChange}
-                aria-labelledby="custom-checkbox-label"
-            >
-                {label}
-            </button>
-            <label id="custom-checkbox-label" className="sr-only">
-                {label}
-            </label>
+            {label && (
+                <>
+                    <button
+                        className="textMuted cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-50 max-w-xs"
+                        disabled={disabled}
+                        onClick={handleCheckboxChange}
+                        aria-labelledby="custom-checkbox-label"
+                    >
+                        {label}
+                    </button>
+                    <label id="custom-checkbox-label" className="sr-only">
+                        {label}
+                    </label>
+                </>
+            )
+            }
             <svg
-                className="pointer-events-none absolute left-0 top-1 h-4 w-4 -mt-[2px] scale-50 fill-white dark:fill-black dark:stroke-black stroke-white opacity-0 transition-all duration-300 peer-checked:scale-100 peer-checked:opacity-100 peer-disabled:cursor-not-allowed"
+                className="pointer-events-none absolute left-0 top-[2px] h-4 w-4 scale-50 fill-white dark:fill-black dark:stroke-black stroke-white opacity-0 transition-all duration-300 peer-checked:scale-100 peer-checked:opacity-100 peer-disabled:cursor-not-allowed"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

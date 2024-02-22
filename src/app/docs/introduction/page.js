@@ -49,16 +49,16 @@ export default async function Page() {
 
             <DocsSection title={'Why Tailwind?'}>
                 <p className='textP'>Tailwind CSS is a utility-first CSS framework designed to streamline and simplify the process of styling web applications. Tailwind CSS simplifies styling by providing a set of pre-defined utility classes that directly apply styles to HTML elements. Another bonus is the rather tiny CSS build size.</p>
-                <p>While some may find it restrictive, the pre-defined classlist nature of Tailwind actually encourages a more consistent style throughout your app, rather that falling into the trap of having extremely specifc or one-case CSS values that may occur with traditional CSS styling. It also permits quick implementation of mobile responsiveness, dark mode, and pseudo states.</p>
+                <p>While some may find it restrictive, the pre-defined classlist nature of Tailwind actually encourages a more consistent style throughout your app, rather that falling into the trap of having extremely specific or one-case CSS values that may occur with traditional CSS styling. It also permits quick implementation of mobile responsiveness, dark mode, and pseudo states.</p>
                 <p>Always remember, a great website is one that is consistent throughout, easy for your users to view and navigate, and one which is accessible to all types of users. Tailwind helps you achieve this.</p>
             </DocsSection>
 
             <DocsSection title={'FAQ'}>
                 <div className='flex flex-col gap-2'>
                     <BreezeAccordion title='Which frameworks can I use this for?' id={1}>
-                        Our premade components are created with React,
-                        but our design systems are pure Tailwind @apply styles, so it is not locked to any framework.
-                        The Build tool, while written in react syntax, has the options to copy the code as React, HTML with your classnames, or HTML with raw Tailwind.
+                        Our component library is created with React and Tailwind,
+                        but our Design System tool uses pure Tailwind @apply styles, so it is not locked to any framework.
+                        The Build tool, while written in react syntax, has the options to copy the code as JSX or HTML.
                     </BreezeAccordion>
                     <BreezeAccordion title='Is there any licensing or royalties to use this in my project?' id={2}>
                         Nope! All our components, premium Blocks, AI generated components, and Themes are free to use in personal or commercial projects.

@@ -15,10 +15,10 @@ export const metadata = {
 
 const defaultCSS =
     `.input {
-  @apply  focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring focus-visible:border-0 transition-colors disabled:cursor-not-allowed disabled:opacity-50 flex justify-center items-center p-2 pl-3
+  @apply focus-visible:outline-none focus-visible:border-2 focus-visible:border-blue-400 dark:focus-visible:border-blue-400 disabled:cursor-not-allowed disabled:opacity-50 flex justify-center items-center p-2 pl-3 transition-colors invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500
 }
 .inputMain {
-  @apply input bg-white dark:bg-zinc-900 text-sm text-black dark:text-white placeholder-zinc-600 dark:placeholder-zinc-400 h-9 shadow-sm border border-zinc-300 dark:border-zinc-700 rounded
+  @apply input bg-white dark:bg-zinc-900 text-sm text-black dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 h-9 shadow-sm border border-zinc-300 dark:border-zinc-700 rounded-md
 }
 
 .text{
@@ -62,26 +62,26 @@ const defaultCSS =
   @apply bg-white dark:bg-zinc-900 border
 }
 .cardDefault {
-  @apply card border-zinc-300 dark:border-zinc-600 rounded shadow-sm hover:shadow-lg p-4 transition-all duration-200 ease-in-out
+  @apply card border-zinc-300 dark:border-zinc-800 rounded-md shadow hover:shadow-md p-4 transition-all duration-200 ease-in-out
 }
 .cardUtil {
-  @apply card border-zinc-200 dark:border-zinc-700 rounded p-1 transition-all transform
+  @apply card border-zinc-200 dark:border-zinc-700 rounded-md shadow p-1 transition-all transform
 }
 
 .btn{
-  @apply focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring focus-visible:border-0 transition-colors disabled:cursor-not-allowed disabled:opacity-50 flex justify-center items-center gap-2 px-2 h-8 shadow duration-200
+  @apply focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring active:scale-95 focus-visible:border-0 transition-all disabled:cursor-not-allowed disabled:opacity-40 flex justify-center items-center gap-2 px-2 h-8 duration-200 shadow-sm
 }
 .btnPrimary {
-  @apply btn bg-zinc-900 dark:bg-white hover:bg-zinc-600 dark:hover:bg-zinc-400 text-white dark:text-black text-sm rounded-md
+  @apply btn bg-zinc-900 dark:bg-white hover:bg-zinc-600 dark:hover:bg-zinc-400 text-white dark:text-black text-sm rounded-md font-medium
 }
 .btnDanger {
-  @apply btn bg-red-500 hover:bg-red-600 text-white text-sm rounded-md
+  @apply btn bg-red-500 hover:bg-red-600 text-white text-sm rounded-md font-medium
 }
 .btnOutline {
-  @apply btn hover:bg-zinc-200 dark:hover:bg-zinc-800 text-sm text-black dark:text-white border-2 border-zinc-600 dark:border-zinc-300 rounded
+  @apply btn hover:bg-zinc-200 dark:hover:bg-zinc-800 text-sm text-black dark:text-white border-2 border-zinc-600 dark:border-zinc-400 rounded-md font-medium
 }
 .btnSecondary {
-  @apply btn bg-zinc-100 dark:bg-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-sm text-black dark:text-white border border-zinc-300 dark:border-zinc-600 rounded
+  @apply btn bg-white dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-sm text-zinc-800 dark:text-white border border-gray-200 dark:border-zinc-800 rounded-md font-medium
 }
 
 .badge {
@@ -103,15 +103,15 @@ export default async function Page() {
 
             <DocsSection>
                 <p className='textP'>This is not a component library or package. This comes with the benefit of no dependencies,
-                    no imports, no configurations, and no messing around with your files and folders. Infact,
-                    all our styles are stored in your global CSS file.</p>
-                <div className='border-2 dotBorder p-4 rounded bg-zinc-100 dark:bg-zinc-900'>
-                    <ul className='list-disc pl-4'>
-                        <li>If you are using our component libary you will need to do this setup.</li>
-                        <li>If you are only using the design system creator, you will get your own version of these CSS classes to copy.</li>
-                        <li>If you are only using the component builder without any custom CSS classes, this setup is not needed.</li>
-                    </ul>
-                </div>
+                    no imports, no configurations, and no messing around with your files and folders. All our styles are stored in your global/main CSS file.
+                    For those who are familiar with the Tailwind @apply directive, you can also place them in CSS modules too.</p>
+                <p>Coming up with classnames used to be a hassle for developers, but we've done all the hard work of making our default design as future proof and modern as
+                    possible - with focus, active, hover, disabled and invalid states. Think of this as us giving you fully styled CSS classes to use.
+                    It is designed to work well right away, or blend well with most design systems. Remember, you can change anything and everything in the styles, and even create your own with our design system creator.</p>
+                <p>
+                    Finally, we use Inter as our default font throughout the site and its components. But you may use any font you wish, we will leave this up to you 😊.
+                </p>
+
                 <p className='textP mt-2'>Since our styles use Tailwind CSS, this will be your only installation. Follow
                     the steps below:</p>
                 <div className='flex flex-col sm:gap-8 gap-6 font-semibold text-xl my-4'>
@@ -121,7 +121,7 @@ export default async function Page() {
                             1
                         </div>
                         <div className='flex gap-1'>
-                            <div className=''>Install Tailwind CSS via npm. Instructions
+                            <div className=''>Install Tailwind CSS. Instructions
                                 <Link href={'https://tailwindcss.com/docs/installation'} className='text-accent1' rel="noopener noreferrer" target="_blank"> here</Link>.
                             </div>
 
@@ -136,7 +136,7 @@ export default async function Page() {
                                 <div>Paste this code into your global CSS file.</div>
                             </div>
                         </div>
-                        <p className={'siteHomeBody'}>These class names are used in our component libary. Feel free to change them to your liking, remove ones you do not need, or add
+                        <p className={'siteHomeBody'}>These class names are used in our component library. Feel free to change them to your liking, remove ones you do not need, or add
                         more of your own!</p>
                         <BreezeCode>{defaultCSS}</BreezeCode>
                     </div>
@@ -147,10 +147,9 @@ export default async function Page() {
                             </div>
                             <div>That's it?!</div>
                         </div>
-                        <p className={'siteHomeBody'}>Yeah that's it. Now you can copy and paste our components into your app.
-                            If you want dark mode capability, make sure your
-                            tailwind.config.js is using darkMode: 'class'.
-                            This is usually enabled by default.</p>
+                        <p className={'siteHomeBody'}>Yeah that's it. Now you can copy and paste our components into your app. You will see the styles being called in our component's classNames where applicable.
+                            Not every component uses them, but most do.
+                        </p>
                     </div>
                 </div>
             </DocsSection>
