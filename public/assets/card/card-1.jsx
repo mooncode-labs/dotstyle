@@ -1,4 +1,4 @@
-export default function Card({ title, children }) {
+export default function SimpleCard({ title, children }) {
     return (
         <div className="cardDefault max-w-sm">
             <div className="flex flex-col">

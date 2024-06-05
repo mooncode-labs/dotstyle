@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState } from 'react';
 
 export default function Accordion({
   children,
@@ -36,7 +36,7 @@ export default function Accordion({
         role="region"
         className={`grid text-sm text-gray-600 dark:text-gray-400 overflow-hidden transition-all duration-300 ease-in-out ${accordionOpen ? 'grid-rows-[1fr] mt-2 opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
       >
-        <div className="overflow-hidden">
+        <div className="overflow-hidden text-left">
           <p>
             {children}
           </p>

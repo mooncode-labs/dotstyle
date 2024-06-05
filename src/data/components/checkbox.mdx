@@ -24,8 +24,8 @@ components:
 The Checkbox component offers a sleek and interactive way to integrate checkbox functionality into your application. It combines accessibility and style, ensuring a user-friendly experience.
 
 #### Usage and Accessibility
-- Editing its appearance is as simple as changing the 'input' style from your dotstyle Tailwind CSS/JS classes and/or editing the jsx.
 - The Checkbox component is ideal for forms, settings, and any interface where binary choices are required.
+- The multiple checkboxes example demonstrates how to use the Checkbox component in a group, allowing users to select multiple options and return an array of selected values.
 - It features an interactive checkbox with aria-labels and attributes, enhancing both usability and accessibility.
 
 #### Props
@@ -35,19 +35,24 @@ The Checkbox component offers a sleek and interactive way to integrate checkbox 
   - The starting state of the checkbox. If true, the component is checked. This is an optional prop, the default will be false.
 - disabled : **boolean**
   - If true, the component is disabled. This is an optional prop, the default will be false.
+- onChange : **function**
+  - A callback function that is called when the checkbox state changes.
 
 #### Example
 ```jsx
-import React, { useState } from 'react';
+import React from 'react';
 import Checkbox from './Checkbox';
 
 function ExampleComponent() {
 
   return (
-    <Checkbox 
+    <Checkbox
+      id = "enable-notifications"
       label="Enable Notifications" 
       checked={true}
       disabled={false}
+      onChange={() => console.log('checked')}
     />
   );
 }
+```

@@ -110,7 +110,7 @@ export default function SidebarSlide() {
                         <button className={`textLabel text-left`}>Redesign</button>
                         <button className={`textLabel text-left`}>Quick Setup</button>
                         <div className="text-gray-500 mt-4">
-                            <AvatarNamed height={'36px'} name={'Lorem Ipsum'}/>
+                            <AvatarNamed height={'36px'} name={'Lorem Ipsum'} src="https://placehold.co/100x100"/>
                         </div>
                     </div>
                 </div>

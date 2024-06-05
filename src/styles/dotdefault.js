@@ -145,10 +145,10 @@ export const defaultStyles = {
         "base": [""],
     },
     "btn": {
-        "focus": ["focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring focus-visible:border-0 transition-colors"],
+        "focus": ["focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring focus-visible:border-transparent dark:focus-visible:border-transparent focus-visible:duration-0"],
         "disabled": ["disabled:cursor-not-allowed disabled:opacity-40"],
         "shadow": ["shadow-sm"],
-        "container": ["flex justify-center items-center gap-2 px-2 h-8 duration-200"],
+        "container": ["flex justify-center items-center gap-2 px-2 h-8 duration-200 transition"],
         "active":["active:scale-95"],
     },
     "btnPrimary": {
@@ -191,7 +191,7 @@ export const defaultStyles = {
         "base": [""],
     },
     "icon": {
-        "focus": ["focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring focus-visible:border-0 transition-colors"],
+        "focus": ["focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring focus-visible:border-transparent dark:focus-visible:border-transparent focus-visible:duration-0 transition"],
         "disabled": ["disabled:cursor-not-allowed disabled:opacity-50"],
         "container": ["flex justify-center items-center px-2 h-8 w-8 duration-200"],
         "active": ["active:scale-95"],

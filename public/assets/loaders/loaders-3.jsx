@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Loader({ title }) {
+export default function Loader3({ title }) {
   return (
     <div className="flex items-center space-x-2" role="status" aria-label="Loading..." aria-live="polite">
       <div>

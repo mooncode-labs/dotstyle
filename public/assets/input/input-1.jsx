@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 
-export default function Input({ placeholder, onChange, disabled }) {
+export default function InputSimple({ placeholder, onChange, disabled }) {
   const [value, setValue] = useState('');
 
   const handleChange = (event) => {

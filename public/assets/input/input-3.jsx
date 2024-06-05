@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 
-export default function Input({ label, placeholder, disabled, onChange }) {
+export default function InputBottomLabel({ label, placeholder, disabled, onChange }) {
     const [value, setValue] = useState('');
 
     const handleChange = (event) => {

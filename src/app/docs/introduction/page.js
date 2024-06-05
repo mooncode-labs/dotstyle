@@ -29,16 +29,16 @@ export default async function Page() {
                     These are the issue we aim to solve.</p>
                 <p>In short, this app currently has 3 features:</p>
                 <div className="flex flex-col ml-4">
-                    <li>React + Tailwind <Link className="text-accent1" href={'/components'}>Component Library</Link></li>
+                    <li>React + Tailwind <Link className="text-accent1 font-medium" href={'/components'}>Component Library</Link></li>
                     <span className="textMute">For example: alerts, modals, toasts...</span>
                     <span className="textMute">You can browse our components from the left nav and copy their code to add them to your app. You can also ask AI for edits prior to copying.</span>
                 </div>
                 <div className="flex flex-col ml-4">
-                    <li>Create <Link className="text-accent1" href={'/components'}>Design Systems</Link> with basic components</li>
+                    <li>Create <Link className="text-accent1 font-medium" href={'/design'}>Design Systems</Link> with basic components</li>
                     <span className="textMute">Design systems contain input, buttons, cards, text variants, icons and badges and divs. Create your own styles and convert them into easy to use and familiar CSS classes.</span>
                 </div>
                 <div className="flex flex-col ml-4">
-                    <li>Component <Link className="text-accent1" href={'/components'}>Builder</Link></li>
+                    <li>Component <Link className="text-accent1 font-medium" href={'/build'}>Builder</Link></li>
                     <span className="textMute">Type code, use AI chat, or upload an image to create custom components in our build tool.</span>
                     <span className="textMute">The code can then be copied into your app. The build tool will also render any custom classes you have made in your design system.</span>
                 </div>
@@ -58,7 +58,7 @@ export default async function Page() {
                     <BreezeAccordion title='Which frameworks can I use this for?' id={1}>
                         Our component library is created with React and Tailwind,
                         but our Design System tool uses pure Tailwind @apply styles, so it is not locked to any framework.
-                        The Build tool, while written in react syntax, has the options to copy the code as JSX or HTML.
+                        The Build tool natively supports coding in React with Tailwind, but will render HTML with Tailwind as well.
                     </BreezeAccordion>
                     <BreezeAccordion title='Is there any licensing or royalties to use this in my project?' id={2}>
                         Nope! All our components, premium Blocks, AI generated components, and Themes are free to use in personal or commercial projects.

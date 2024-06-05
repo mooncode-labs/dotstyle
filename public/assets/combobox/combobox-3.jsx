@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ComboboxDropdown from "./combobox-2";
 
-export default function Combobox({ title, onOptionClick }) {
+export default function ComboboxMultiple({ title, onOptionClick }) {
   const [isOpen, setIsOpen] = useState(false)
   const divRef = useRef(null);
 
@@ -27,12 +27,12 @@ export default function Combobox({ title, onOptionClick }) {
 
   return (
     <div ref={divRef} className="relative" >
-      <button className={`btnPrimary`} onClick={() => { setIsOpen(!isOpen) }}>Open</button>
+      <button className="btnPrimary" onClick={() => { setIsOpen(!isOpen) }}>Open</button>
 
       <div className={`cardUtil py-2 w-44 h-fit absolute top-10 ${isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-2 opacity-0 invisible'}`}>
-        <div className={`text5 ml-1 my-1`}>{title}</div>
+        <div className="text5 ml-1 my-1">{title}</div>
         <button
-            className={'text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent'}
+            className="text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent"
             onClick={() => handleButtonClick('button-1')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
@@ -42,7 +42,7 @@ export default function Combobox({ title, onOptionClick }) {
           {'Button 1'}
         </button>
         <button
-            className={'text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent'}
+            className="text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent"
             onClick={() => handleButtonClick('button-2')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
@@ -52,7 +52,8 @@ export default function Combobox({ title, onOptionClick }) {
         </button>
         <ComboboxDropdown label={"More"} onOptionClick={handleButtonClick}/>
         <ComboboxDropdown label={"Settings"} onOptionClick={handleButtonClick}/>
-        <button className={`text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent text-red-500`} onClick={() => handleButtonClick('delete')}>
+        <button className="text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent text-red-500"
+                onClick={() => handleButtonClick('delete')}>
           Delete
         </button>
       </div>

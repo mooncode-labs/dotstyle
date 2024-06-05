@@ -1,7 +1,7 @@
 'use client'
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-export default function RadioCheck({ label, options, disabled, onSubmit }) {
+export default function RadioCheckWithSubmit({ label, options, disabled, onSubmit }) {
   const [selectedOption, setSelectedOption] = useState(null)
 
   if (!options || options.length === 0) {

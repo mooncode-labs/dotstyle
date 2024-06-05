@@ -1,4 +1,4 @@
-export default function Button({label, onClick, disabled}) {
+export default function SecondaryButton({label, onClick, disabled}) {
     return (
         <button
             className="btnSecondary"

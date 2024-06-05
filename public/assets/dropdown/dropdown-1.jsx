@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 
-export default function Dropdown({ options, onChange }) {
+export default function DropdownSimple({ options, onChange }) {
     const [selectedOption, setSelectedOption] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -41,7 +41,7 @@ export default function Dropdown({ options, onChange }) {
                 aria-labelledby="dropdown-toggle-button"
             >
                 {options.map((option, index) => (
-                    <button key={index} className={'text-sm hover:bg-zinc-200 dark:hover:bg-zinc-800 p-[6px] rounded flex items-center justify-between gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent'}
+                    <button key={index} className={'text-sm text-black dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-800 p-[6px] rounded flex items-center justify-between gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent'}
                         onClick={() => handleOptionClick(option)}
                     >
                         {option}

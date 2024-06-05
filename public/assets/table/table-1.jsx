@@ -1,4 +1,4 @@
-export default function Table() {
+export default function Table1() {
     return (
         <div className={`cardUtil flex`}>
             <table className="w-full">

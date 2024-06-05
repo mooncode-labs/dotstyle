@@ -1,7 +1,7 @@
-"use client"
+'use client'
 import React, { useState } from 'react';
 
-export default function AlertComponent({ title, message }) {
+export default function AlertDefault({ title, message }) {
     const [isVisible, setIsVisible] = useState(true);
 
     const dismissAlert = () => {

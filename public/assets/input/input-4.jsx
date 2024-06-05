@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 
-const FileSelectComponent = ({disabled}) => {
+const InputFile = ({disabled}) => {
   const [selectedFileName, setSelectedFileName] = useState('Select File');
 
   const updateSelectedFileName = (e) => {
@@ -46,5 +46,5 @@ const FileSelectComponent = ({disabled}) => {
   );
 };
 
-export default FileSelectComponent;
+export default InputFile;
 

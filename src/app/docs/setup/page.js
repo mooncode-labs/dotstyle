@@ -69,7 +69,7 @@ const defaultCSS =
 }
 
 .btn{
-  @apply focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring active:scale-95 focus-visible:border-0 transition-all disabled:cursor-not-allowed disabled:opacity-40 flex justify-center items-center gap-2 px-2 h-8 duration-200 shadow-sm
+  @apply focus-visible:outline-none focus-visible:ring-blue-400 focus-visible:ring active:scale-95 focus-visible:border-transparent dark:focus-visible:border-transparent focus-visible:duration-0 transition disabled:cursor-not-allowed disabled:opacity-40 flex justify-center items-center gap-2 px-2 h-8 duration-200 shadow-sm
 }
 .btnPrimary {
   @apply btn bg-zinc-900 dark:bg-white hover:bg-zinc-600 dark:hover:bg-zinc-400 text-white dark:text-black text-sm rounded-md font-medium
@@ -133,12 +133,26 @@ export default async function Page() {
                                 className='rounded-full min-w-[25px] h-[25px] flex items-center justify-center bg-black dark:bg-white text-white dark:text-black font-semibold text-sm'>2
                             </div>
                             <div className='flex'>
-                                <div>Paste this code into your global CSS file.</div>
+                                <div>Paste this code into your main CSS file.</div>
                             </div>
                         </div>
                         <p className={'siteHomeBody'}>These class names are used in our component library. Feel free to change them to your liking, remove ones you do not need, or add
-                        more of your own!</p>
+                            more of your own!</p>
                         <BreezeCode>{defaultCSS}</BreezeCode>
+
+                        <p className={'siteHomeBody mt-4'}>Make sure to add the @tailwind directives for each of Tailwind’s layers to your main CSS file.</p>
+                        <BreezeCode>{`@tailwind base;
+@tailwind components;
+@tailwind utilities;`}
+                        </BreezeCode>
+
+                        <div>
+                            Dark Mode
+                        </div>
+                        <p className={'siteHomeBody'}>Our classes already have dark mode built in. They will switch based on system color schemes by default.
+                            If you want to support toggling dark mode manually instead of relying on the operating system preference, follow Tailwind instructions
+                            <Link className={'text-accent1 font-medium'} rel="noopener noreferrer" target="_blank" href={'https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually'}> here</Link>.</p>
+
                     </div>
                     <div className='flex flex-col items-start gap-2 pb-4'>
                         <div className='flex gap-2 items-center'>

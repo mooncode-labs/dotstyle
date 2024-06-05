@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React, { useState } from 'react';
 
 const ClearableInput = ({placeholder, onChange, disabled}) => {

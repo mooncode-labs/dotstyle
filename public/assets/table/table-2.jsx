@@ -1,4 +1,4 @@
-export default function Table() {
+export default function Table2() {
     return (
 
         <div className='flex'>

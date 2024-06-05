@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 
-export default function Modal({title, message, children, onAction}) {
+export default function ModalWithSend({title, message, children, onAction}) {
     const [isOpen, setIsOpen] = useState(false);
     const [value, setValue] = useState('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 

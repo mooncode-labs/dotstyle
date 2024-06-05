@@ -22,13 +22,13 @@ export default async function Page() {
             <DocsSection>
                 <h2 className='siteText2 mb-2'>Our Design System</h2>
                 <h3 className='siteText3'>Check out our design system. 🪂</h3>
-                <p className='textP'>DotStyle uses purely Tailwind CSS for all its UI. We use the darkMode: 'class' method. Our icons are from Heroicons, LucidReact and FontAwesome.</p>
+                <p className='textP'>DotStyle uses purely Tailwind CSS for all its UI. Our icons are from Heroicons, LucidReact and FontAwesome.</p>
             </DocsSection>
 
             <DocsSection title={'1. Typography'}>
                 <div className='flex flex-col gap-4 p-4 rounded-lg outline-1 outline-gray-500 outline-dashed'>
                     <span className='siteText2'>Headings</span>
-                    <span className='textTitle'>Modal Titles</span>
+                    <span className='textTitle'>Titles</span>
                     <span className='siteText3'>Heading Info</span>
                     <span className='siteText4 !m-0'>Sub-Heading 1</span>
                     <span className='siteText5'>Sub-Headings 2</span>
@@ -42,15 +42,15 @@ export default async function Page() {
                 <div className='flex flex-col gap-4 p-4 rounded-lg outline-1 outline-gray-500 outline-dashed'>
                     <div className='card-default'>
                         <span className='siteText5'>1. Popup Card</span> <br/>
-                        It had been 12 years since I had seen him, and the first thing he says is 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+                        The Moon's surface is covered with craters, mountains, and flat plains called 'maria', which are basaltic rock from ancient volcanic eruptions.
                     </div>
                     <div className='dotBorder border-2 p-4 rounded-lg'>
                         <span className='siteText5'>2. Wrapper Card</span> <br/>
-                        It had been 12 years since I had seen him, and the first thing he says is 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+                        The Moon's surface is covered with craters, mountains, and flat plains called 'maria', which are basaltic rock from ancient volcanic eruptions.
                     </div>
                     <div className='card-util'>
                         <span className='siteText5'>3. Utility Card</span> <br/>
-                        It had been 12 years since I had seen him, and the first thing he says is 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+                        The Moon's surface is covered with craters, mountains, and flat plains called 'maria', which are basaltic rock from ancient volcanic eruptions.
                     </div>
                 </div>
             </DocsSection>
@@ -162,7 +162,7 @@ export default async function Page() {
                 </div>
             </DocsSection>
             <DocsSection title={'7. Badge'}>
-                <div className='flex gap-4 p-4 rounded-lg outline-1 outline-gray-500 outline-dashed'>
+                <div className='flex gap-4 p-4 rounded-lg outline-1 outline-gray-500 outline-dashed items-center'>
                     <div className="text-xs bg-[#63f7a7] font-medium rounded-full p-1 border-black border text-black h-5 w-fit flex items-center justify-center">
                         v1.0
                     </div>

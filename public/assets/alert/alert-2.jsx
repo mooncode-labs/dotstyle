@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function AlertComponent({ title, message }) {
+export default function AlertAction({ title, message }) {
   const [isVisible, setIsVisible] = useState(true);
 
   const dismissAlert = () => {

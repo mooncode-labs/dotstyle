@@ -1,4 +1,4 @@
-export default function Card({ title, children }) {
+export default function ActionCard({ title, children }) {
     return (
         <div className="cardDefault w-72">
             <span className="text4">

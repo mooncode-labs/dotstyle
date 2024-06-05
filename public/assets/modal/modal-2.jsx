@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 
-export default function Modal({title, prompt, children}) {
+export default function ModalDialog({title, prompt, children}) {
     const [isOpen, setIsOpen] = useState(false);
 
     // Function to handle the "Escape" key press

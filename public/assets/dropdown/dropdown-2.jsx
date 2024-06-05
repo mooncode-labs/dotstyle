@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 
-export default function Dropdown({ options, onChange }) {
+export default function DropdownSubmit({ options, onChange }) {
     const [selectedOption, setSelectedOption] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -40,7 +40,7 @@ export default function Dropdown({ options, onChange }) {
             </div>
 
             <div
-                className={`origin-top-right absolute right-0 top-9 mt-1 w-48 cardUtil ${isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-2 opacity-0 invisible'}`}
+                className={`origin-top-right z-20 absolute right-0 top-9 mt-1 w-48 cardUtil ${isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-2 opacity-0 invisible'}`}
             >
                 <div
                     role="menu"

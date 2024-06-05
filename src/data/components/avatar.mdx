@@ -27,6 +27,8 @@ The `Avatar` component is a user interface element that combines an avatar image
 - An `onClick` event handler can be attached for additional interactivity, such as opening a user profile or triggering a modal.
 
 #### Props
+- `src`: **string**
+  - The URL of the avatar image.
 - `height`: **string**
   - The height of the avatar image. If not provided, it defaults to "40px".
 - `name`: **string**
@@ -40,6 +42,7 @@ import React from 'react';
 import AvatarNamed from './AvatarNamed';
 
 <AvatarNamed
+  src="https://placehold.co/100x100"
   height="50px"
   name="John Doe"
   onClick={() => console.log('Avatar Clicked')}

@@ -1,4 +1,4 @@
-export default function Card({ title, children, date, imageUrl, imageAlt }) {
+export default function BlogCard({ title, children, date, imageUrl, imageAlt }) {
     return (
         <article className="overflow-hidden cardUtil max-w-sm">
             <img

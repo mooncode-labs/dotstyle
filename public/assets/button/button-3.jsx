@@ -1,4 +1,4 @@
-export default function Button({label, onClick, disabled}) {
+export default function OutlineButton({label, onClick, disabled}) {
     return (
         <button
             className="btnOutline"

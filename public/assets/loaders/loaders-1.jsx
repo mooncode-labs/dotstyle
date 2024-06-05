@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Loader({ title }) {
+export default function Loader1({ title }) {
     return (
         <div aria-live="polite" role="status" className="inline-flex items-center justify-center">
             <button

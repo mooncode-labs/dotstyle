@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react"
 
-export default function Tooltip({ children, message }) {
+export default function TooltipBottom({ children, message }) {
     const [showTooltip, setShowTooltip] = useState(false)
     return (
         <div className="relative">

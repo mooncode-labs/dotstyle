@@ -1,4 +1,4 @@
-export default function AvatarNamed({ height, name, onClick }) {
+export default function AvatarNamed({ src, height, name, onClick }) {
   if (!height) {
     height = "40px"
   }
@@ -6,7 +6,7 @@ export default function AvatarNamed({ height, name, onClick }) {
     <button className="relative inline-flex items-center justify-center rounded gap-2"
       onClick={onClick}>
       <img
-        src="/DS_Avatar.png"
+        src={src}
         alt="DS"
         title="user avatar"
         width={height}

@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 
-export default function Switch({ label, disabled, checked, onChange }) {
+export default function SwitchSingle({ label, disabled, checked, onChange }) {
     const [isChecked, setIsChecked] = useState(checked ? checked : false)
 
     const handleCheckboxChange = () => {

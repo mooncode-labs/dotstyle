@@ -1,7 +1,7 @@
 'use client'
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-export default function ComboboxDropdown({ label, onOptionClick }) {
+export default function ComboboxHover({ label, onOptionClick }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const handleButtonClick = (option) => {
@@ -13,7 +13,7 @@ export default function ComboboxDropdown({ label, onOptionClick }) {
             onMouseLeave={() => setIsOpen(false)} onMouseEnter={() => setIsOpen(true)} onFocus={() => setIsOpen(true)} onBlur={() => setIsOpen(false)}
             role="combobox" aria-controls='combobox-list' aria-expanded={isOpen} aria-haspopup="listbox"
         >
-            <button className={`text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 p-[6px] rounded flex items-center gap-2 w-full justify-between`}
+            <button className="text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 p-[6px] rounded flex items-center gap-2 w-full justify-between"
             >
                 {label}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">

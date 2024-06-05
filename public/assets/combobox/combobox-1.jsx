@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-export default function Combobox({ title, onOptionClick }) {
+export default function ComboboxClick({ title, onOptionClick }) {
   const [isOpen, setIsOpen] = useState(false)
   const divRef = useRef(null);
 
@@ -26,10 +26,10 @@ export default function Combobox({ title, onOptionClick }) {
 
   return (
     <div ref={divRef} className="relative" role="combobox" aria-controls='combobox-list' aria-expanded={isOpen} aria-haspopup="listbox">
-      <button className={`btnPrimary`} onClick={() => { setIsOpen(!isOpen) }}>Open</button>
+      <button className="btnPrimary" onClick={() => { setIsOpen(!isOpen) }}>Open</button>
 
       <div role="listbox" className={`cardUtil py-2 w-44 h-fit absolute top-10 ${isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-2 opacity-0 invisible'}`}>
-        <div className={`text5 ml-1 my-1`}>{title}</div>
+        <div className="text5 ml-1 my-1">{title}</div>
         <button
             className={'text-sm hover:bg-neutral-200 dark:hover:bg-neutral-800 p-[6px] rounded flex items-center gap-2 w-full duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent'}
             onClick={() => handleButtonClick('reload')}
